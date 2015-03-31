@@ -127,18 +127,18 @@ namespace base { namespace warcraft3 { namespace jass { namespace nf_register {
 		{
 			if (get_war3_searcher().get_version() > version_123)
 			{
-				real_storm_alloc   = hook::iat(L"Game.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc);
-				real_tls_get_value = hook::iat(L"Game.dll", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
+				real_storm_alloc   = hook::iat(L"Nirvana.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc);
+				real_tls_get_value = hook::iat(L"Nirvana.dll", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
 			}
 			else if (get_war3_searcher().get_version() > version_121b)
 			{
-				real_storm_alloc   = hook::iat(L"Game.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc_122);
-				real_tls_get_value = hook::iat(L"Game.dll", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
+				real_storm_alloc   = hook::iat(L"Nirvana.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc_122);
+				real_tls_get_value = hook::iat(L"Nirvana.dll", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
 			}
 			else
 			{
-				real_storm_alloc   = hook::iat(L"Game.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc_120);
-				real_tls_get_value = hook::iat(L"War3.exe", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
+				real_storm_alloc   = hook::iat(L"Nirvana.dll", "Storm.dll",    (const char*)401, (uintptr_t)fake_storm_alloc_120);
+				real_tls_get_value = hook::iat(L"Nirvana.exe", "Kernel32.dll", "TlsGetValue",    (uintptr_t)fake_tls_get_value);
 			}
 			return true;
 		}

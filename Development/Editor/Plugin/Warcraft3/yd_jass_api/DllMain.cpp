@@ -23,6 +23,7 @@ BOOL APIENTRY DllMain(HMODULE module, DWORD reason, LPVOID /*pReserved*/)
 	if (reason == DLL_PROCESS_ATTACH)
 	{
 		DisableThreadLibraryCalls(module);
+		Initialize();
 	}
 
 	return TRUE;

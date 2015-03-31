@@ -7,7 +7,7 @@
 namespace base { namespace warcraft3 {
 
 	war3_searcher::war3_searcher()
-		: _Mybase(::GetModuleHandleW(L"Game.dll"))
+		: _Mybase(::GetModuleHandleW(L"Nirvana.dll"))
 		, version_(search_version())
 		, get_instance_(search_get_instance())
 		, get_gameui_(search_get_gameui())

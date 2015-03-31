@@ -37,7 +37,7 @@ namespace base { namespace warcraft3 { namespace directory {
 
 	bool validate(boost::filesystem::path const& p)
 	{
-		static const std::list<std::wstring> file_list = boost::assign::list_of(L"war3.exe")(L"game.dll")(L"war3.mpq")(L"war3patch.mpq")(L"storm.dll");
+		static const std::list<std::wstring> file_list = boost::assign::list_of(L"Nirvana.exe")(L"Nirvana.dll")(L"war3.mpq")(L"war3patch.mpq")(L"storm.dll");
 
 		foreach(const std::wstring &file_name, file_list)
 		{
@@ -113,7 +113,7 @@ namespace base { namespace warcraft3 { namespace directory {
 	bool choose(const wchar_t* title, boost::filesystem::path& result)
 	{
 		std::wstring retval;
-		if (!open_file_dialog(title, L"war3.exe\0war3.exe\0", NULL, &retval))
+		if (!open_file_dialog(title, L"Nirvana.exe\0Nirvana.exe\0", NULL, &retval))
 		{
 			return false;
 		}
